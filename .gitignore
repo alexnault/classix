@@ -1,0 +1,10 @@
+# Dependencies
+node_modules
+
+# Builds
+dist
+types
+coverage
+
+# Misc
+.DS_Store
