@@ -1,7 +1,6 @@
 type Argument = string | boolean | number;
 
 function cx(...args: Argument[]): string;
-
 function cx(): string {
   let str = "",
     i = 0,
