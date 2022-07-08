@@ -1,0 +1,8 @@
+expect(cx(0)).toBe("0");
+
+
+
+// import { cx } from "./index";
+
+// TODO class1 class2 instead of foo bar?
+// TODO use tap/ava/mocha insteand?

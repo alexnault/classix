@@ -1,4 +1,4 @@
-const cx = require("./index").default;
+import cx from "./index";
 
 describe("cx", () => {
   it("undefined", () => {
