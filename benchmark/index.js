@@ -1,12 +1,12 @@
-const { Suite } = require("benchmark");
-const classnames = require("classnames");
-const clsx = require("clsx");
+import benchmark from "benchmark";
+import classnames from "classnames";
+import clsx from "clsx";
 
-const cx = require("../dist/index.js").default;
+import cx from "../dist/index.js";
 
 const args = ["class1", "class2", false && "class3", true && "class4"];
 
-new Suite()
+new benchmark.Suite()
   .add("classnames", () => classnames(...args))
   .add("clsx", () => clsx(...args))
   .add("cx", () => cx(...args))

@@ -4,7 +4,7 @@
     "isolatedModules": false,
     "lib": ["esnext"],
     "outDir": "dist",
-    "target": "es5",
+    "target": "es6",
     "declaration": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
@@ -13,7 +13,8 @@
     "noUnusedParameters": true,
     "skipLibCheck": true,
     "strict": true,
-    "types": ["jest"]
+    "types": ["jest"],
+    "noEmitHelpers": true
   },
   "include": ["src/**/*"],
   "exclude": ["src/**/*.test.ts"]

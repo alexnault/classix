@@ -3,10 +3,12 @@ import cx from "./index";
 describe("cx", () => {
   it("undefined", () => {
     expect(cx()).toBe("");
+    // @ts-expect-error Testing outside of types
     expect(cx(undefined)).toBe("");
   });
 
   it("null", () => {
+    // @ts-expect-error Testing outside of types
     expect(cx(null)).toBe("");
   });
 
@@ -40,17 +42,23 @@ describe("cx", () => {
   });
 
   it("object", () => {
+    // @ts-expect-error Testing outside of types
     expect(cx({})).toBe("");
+    // @ts-expect-error Testing outside of types
     expect(cx({ foo: "bar" })).toBe("");
   });
 
   it("array", () => {
+    // @ts-expect-error Testing outside of types
     expect(cx([])).toBe("");
+    // @ts-expect-error Testing outside of types
     expect(cx(["foo"])).toBe("");
+    // @ts-expect-error Testing outside of types
     expect(cx([[["foo"]]])).toBe("");
   });
 
   it("function", () => {
+    // @ts-expect-error Testing outside of types
     expect(cx(() => "")).toBe("");
   });
 });
