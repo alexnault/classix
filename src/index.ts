@@ -1,8 +1,8 @@
 export function cx(): string {
   let str = "",
     i = 0,
-    arg,
-    val;
+    arg: unknown,
+    val: string | number;
 
   while (i < arguments.length) {
     if ((arg = arguments[i++])) {
