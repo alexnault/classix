@@ -1,13 +1,15 @@
 type Argument = string | boolean | number;
 
-export function cx(...args: Argument[]): string {
+function cx(...args: Argument[]): string;
+
+function cx(): string {
   let str = "",
     i = 0,
     arg: unknown,
     val: string | number;
 
-  while (i < args.length) {
-    if ((arg = args[i++])) {
+  while (i < arguments.length) {
+    if ((arg = arguments[i++])) {
       if (
         (val = typeof arg === "string" || typeof arg === "number" ? arg : "")
       ) {
@@ -19,4 +21,5 @@ export function cx(...args: Argument[]): string {
   return str;
 }
 
+export { cx };
 export default cx;

@@ -4,7 +4,7 @@
     "isolatedModules": false,
     "lib": ["esnext"],
     "outDir": "dist",
-    "target": "es6",
+    "target": "es5",
     "declaration": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
