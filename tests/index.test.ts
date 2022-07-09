@@ -50,6 +50,7 @@ describe("cx", () => {
   });
 
   it("array", () => {
+    expect(cx(...["foo", "bar"])).toBe("foo bar");
     // @ts-expect-error Testing outside of types
     expect(cx([])).toBe("");
     // @ts-expect-error Testing outside of types
