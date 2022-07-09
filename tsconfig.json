@@ -13,9 +13,7 @@
     "noUnusedParameters": true,
     "skipLibCheck": true,
     "strict": true,
-    "types": ["jest"],
-    "noEmitHelpers": true
+    "types": ["jest"]
   },
-  "include": ["src/**/*"],
-  "exclude": ["src/**/*.test.ts"]
+  "include": ["src/**/*"]
 }

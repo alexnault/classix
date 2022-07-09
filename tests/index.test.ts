@@ -1,4 +1,4 @@
-import { cx } from "./index";
+import { cx } from "../src";
 
 describe("cx", () => {
   it("undefined", () => {
