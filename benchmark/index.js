@@ -1,8 +1,8 @@
-import benchmark from "benchmark";
-import classnames from "classnames";
-import clsx from "clsx";
+const benchmark = require("benchmark");
+const classnames = require("classnames");
+const { clsx } = require("clsx");
 
-import cx from "../dist/index.js";
+const { cx } = require("../dist");
 
 const args = ["class1", "class2", false && "class3", true && "class4"];
 

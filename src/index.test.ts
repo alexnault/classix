@@ -38,6 +38,7 @@ describe("cx", () => {
   });
 
   it("number", () => {
+    expect(cx(0)).toBe("");
     expect(cx(7)).toBe("7");
   });
 
@@ -60,5 +61,7 @@ describe("cx", () => {
   it("function", () => {
     // @ts-expect-error Testing outside of types
     expect(cx(() => "")).toBe("");
+    // @ts-expect-error Testing outside of types
+    expect(cx(() => "foo")).toBe("");
   });
 });

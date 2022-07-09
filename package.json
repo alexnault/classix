@@ -16,6 +16,7 @@
   "repository": "https://github.com/alexnault/classix",
   "homepage": "https://github.com/alexnault/classix#readme",
   "scripts": {
+    "benchmark": "node benchmark",
     "build": "rm -rf ./dist && tsc",
     "lint": "eslint src/ --max-warnings=0",
     "test": "jest"
