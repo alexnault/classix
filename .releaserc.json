@@ -10,8 +10,6 @@
       {
         "releaseRules": [
           { "type": "docs", "release": "patch" },
-          { "type": "refactor", "release": "patch" },
-          { "type": "style", "release": "patch" },
           { "type": "test", "release": "patch" },
           { "type": "chore", "release": "patch" }
         ],
@@ -38,21 +36,6 @@
             {
               "type": "docs",
               "section": "Documentation",
-              "hidden": false
-            },
-            {
-              "type": "refactor",
-              "section": "Code Refactors",
-              "hidden": false
-            },
-            {
-              "type": "perf",
-              "section": "Performance",
-              "hidden": false
-            },
-            {
-              "type": "style",
-              "section": "Styles",
               "hidden": false
             },
             {
