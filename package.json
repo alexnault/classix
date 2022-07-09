@@ -1,6 +1,6 @@
 {
   "name": "classix",
-  "version": "0.0.2",
+  "version": "1.0.0-semantic-release",
   "description": "A tiny utility for conditionally joining classNames.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
