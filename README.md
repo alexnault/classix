@@ -31,6 +31,9 @@ cx(true ? "class1" : "class2");
 cx("class1", false ? "class2" : "class3");
 // => "class1 class3"
 
+cx(...['class1', 'class2', 'class3']);
+// => class1 class2 class3
+
 cx(
   "flex",
   isPrimary ? "bg-primary-100" : "bg-secondary-100",
