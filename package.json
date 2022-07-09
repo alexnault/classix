@@ -10,13 +10,15 @@
     "classes",
     "classname",
     "classnames",
-    "clsx"
+    "clsx",
+    "tailwind",
+    "css"
   ],
   "license": "MIT",
   "repository": "https://github.com/alexnault/classix",
   "homepage": "https://github.com/alexnault/classix#readme",
   "scripts": {
-    "benchmark": "node benchmark",
+    "bench": "node benchmark",
     "build": "rm -rf ./dist && tsc",
     "format": "prettier --write \"{src,benchmark}/**/*.{js,ts}\"",
     "lint": "eslint src/ --max-warnings=0",

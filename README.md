@@ -48,10 +48,6 @@ cx(
 - Zero dependencies
 - Follows [semantic versioning](https://semver.org/)
 
-## API
-
-TODO
-
 ## Changelog
 
 For a list of changes and releases, see the [changelog](https://github.com/alexnault/classix/releases).
