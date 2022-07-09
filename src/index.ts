@@ -1,5 +1,10 @@
 type Argument = string | boolean | number;
 
+/**
+ * Conditionally join classNames into a single string
+ * @param {...String} args The expressions to evaluate
+ * @returns {String} The joined classNames
+ */
 function cx(...args: Argument[]): string;
 function cx(): string {
   let str = "",
