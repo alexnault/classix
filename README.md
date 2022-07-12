@@ -48,15 +48,6 @@ cx(
 
 ## Comparison
 
-classix aims to provide the fastest and tiniest utility by ommiting the object API, which it considers less ergonomic than standard function arguments:
-
-```js
-// 🚫
-cx({ class1: isPrimary && isLarge, class2: !isPrimary || !isLarge });
-// ✅
-cx(isPrimary && isLarge ? "class1" : "class2");
-```
-
 |              | classix                                          | clsx                                          | classnames                                          |
 | ------------ | ------------------------------------------------ | --------------------------------------------- | --------------------------------------------------- |
 | **Size**     | [281B](https://bundlephobia.com/package/classix) | [330B](https://bundlephobia.com/package/clsx) | [454B](https://bundlephobia.com/package/classnames) |
@@ -65,9 +56,18 @@ cx(isPrimary && isLarge ? "class1" : "class2");
 | **Numbers**  | Yes                                              | Yes                                           | Yes                                                 |
 | **Booleans** | Yes                                              | Yes                                           | Yes                                                 |
 | **Arrays**   | Yes with spreading                               | Yes                                           | Yes                                                 |
-| **Objects**  | No                                               | Yes                                           | Yes                                                 |
+| **Objects**  | No\*\*                                           | Yes                                           | Yes                                                 |
 
 \*Operations per second on an AMD Ryzen 5 5600x
+
+\*\*classix aims to provide the fastest and tiniest utility by ommiting the object API, which it considers less ergonomic than standard function arguments:
+
+```js
+// 🚫
+cx({ class1: isPrimary && isLarge, class2: !isPrimary || !isLarge });
+// ✅
+cx(isPrimary && isLarge ? "class1" : "class2");
+```
 
 ## Highlights
 
