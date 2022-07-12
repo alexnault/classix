@@ -1,5 +1,7 @@
 # classix
 
+The [fastest](#comparison) and [tiniest](#comparison) utility for conditionally joining classNames.
+
 ## Installation
 
 ```bash
@@ -7,6 +9,8 @@ npm install classix
 ```
 
 ## Usage
+
+Use any amount of string expressions and classix will join them like so:
 
 ```js
 import cx from "classix";
@@ -31,7 +35,7 @@ cx(true ? "class1" : "class2");
 cx("class1", false ? "class2" : "class3");
 // => "class1 class3"
 
-cx(...['class1', 'class2', 'class3']);
+cx(...["class1", "class2", "class3"]);
 // => class1 class2 class3
 
 cx(
@@ -42,13 +46,35 @@ cx(
 // => "flex bg-primary-100 m-2 p-2" *assuming isPrimary is true and isLarge is false
 ```
 
+## Comparison
+
+|              | classix                                          | clsx                                          | classnames                                          |
+| ------------ | ------------------------------------------------ | --------------------------------------------- | --------------------------------------------------- |
+| **Size**     | [281B](https://bundlephobia.com/package/classix) | [330B](https://bundlephobia.com/package/clsx) | [454B](https://bundlephobia.com/package/classnames) |
+| **Ops/s\***  | 29M                                              | 28M                                           | 7M                                                  |
+| **Strings**  | Yes                                              | Yes                                           | Yes                                                 |
+| **Numbers**  | Yes                                              | Yes                                           | Yes                                                 |
+| **Booleans** | Yes                                              | Yes                                           | Yes                                                 |
+| **Arrays**   | Yes with spreading                               | Yes                                           | Yes                                                 |
+| **Objects**  | No\*\*                                           | Yes                                           | Yes                                                 |
+
+\*Operations per second on an AMD Ryzen 5 5600x
+
+\*\*classix aims to provide the fastest and tiniest utility by ommiting the object API, which it considers less ergonomic than standard function arguments:
+
+```js
+// 🚫
+cx({ class1: isPrimary && isLarge, class2: !isPrimary || !isLarge });
+// ✅
+cx(isPrimary && isLarge ? "class1" : "class2");
+```
+
 ## Highlights
 
-- Fast
-- Under 1 kB minified & gzipped
-- Typed with TypeScript
-- Fully tested
+- Fastest & tiniest
 - Zero dependencies
+- Fully typed (with TypeScript)
+- Fully tested
 - Follows [semantic versioning](https://semver.org/)
 
 ## Changelog
