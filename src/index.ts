@@ -12,9 +12,13 @@ function cx(): string {
     arg: unknown;
 
   while (i < arguments.length) {
-    if ((arg = arguments[i++]) && arg && (typeof arg === "string" || typeof arg === "number")) {
-        str && (str += " ");
-        str += arg;
+    if (
+      (arg = arguments[i++]) &&
+      arg &&
+      (typeof arg === "string" || typeof arg === "number")
+    ) {
+      str && (str += " ");
+      str += arg;
     }
   }
   return str;
