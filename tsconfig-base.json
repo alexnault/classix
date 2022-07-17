@@ -2,9 +2,6 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "isolatedModules": false,
-    "lib": ["esnext"],
-    "outDir": "dist",
-    "target": "es5",
     "declaration": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
