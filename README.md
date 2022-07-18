@@ -60,7 +60,7 @@ cx(
 
 \*Operations per second on an AMD Ryzen 5 5600x
 
-\*\*classix aims to provide the fastest and tiniest utility by ommiting the object API, which it considers less ergonomic than standard function arguments:
+\*\*classix aims to provide the fastest and tiniest utility by omiting the object API, which it considers less ergonomic than standard function arguments:
 
 ```js
 // 🚫
