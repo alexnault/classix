@@ -9,17 +9,15 @@ function cx(...args: Argument[]): string;
 function cx(): string {
   let str = "",
     i = 0,
-    arg: unknown,
-    val: string | number;
+    arg: unknown;
 
   while (i < arguments.length) {
-    if ((arg = arguments[i++])) {
-      if (
-        (val = typeof arg === "string" || typeof arg === "number" ? arg : "")
-      ) {
-        str && (str += " ");
-        str += val;
-      }
+    if (
+      (arg = arguments[i++]) &&
+      (typeof arg === "string" || typeof arg === "number")
+    ) {
+      str && (str += " ");
+      str += arg;
     }
   }
   return str;
