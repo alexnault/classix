@@ -1,7 +1,7 @@
 {
   "name": "classix",
   "version": "1.0.0-semantic-release",
-  "description": "A tiny utility for conditionally joining classNames.",
+  "description": "The fastest and tiniest utility for conditionally joining classNames.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Alex Nault",
