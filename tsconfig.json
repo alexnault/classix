@@ -1,15 +1,21 @@
 {
   "compilerOptions": {
+    "declaration": true,
     "esModuleInterop": true,
     "isolatedModules": false,
-    "declaration": true,
+    "lib": ["esnext"],
+    "module": "ESNext",
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "outDir": "dist",
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
+    "noImplicitUseStrict": false,
+    "target": "esnext",
+    "alwaysStrict": false,
     "types": ["jest"]
   },
   "include": ["src/**/*"]
