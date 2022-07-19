@@ -3,12 +3,10 @@ import { cx } from "../src";
 describe("cx", () => {
   it("undefined", () => {
     expect(cx()).toBe("");
-    // @ts-expect-error Testing outside of types
     expect(cx(undefined)).toBe("");
   });
 
   it("null", () => {
-    // @ts-expect-error Testing outside of types
     expect(cx(null)).toBe("");
   });
 
