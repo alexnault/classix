@@ -4,10 +4,12 @@ describe("cx", () => {
   it("undefined", () => {
     expect(cx()).toBe("");
     expect(cx(undefined)).toBe("");
+    expect(cx(undefined, "foo")).toBe("foo");
   });
 
   it("null", () => {
     expect(cx(null)).toBe("");
+    expect(cx(null, "foo")).toBe("foo");
   });
 
   it("string", () => {
