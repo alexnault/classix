@@ -50,7 +50,7 @@ cx(
 
 |              | classix                                          | clsx                                          | classnames                                          |
 | ------------ | ------------------------------------------------ | --------------------------------------------- | --------------------------------------------------- |
-| **Size**     | [281B](https://bundlephobia.com/package/classix) | [330B](https://bundlephobia.com/package/clsx) | [454B](https://bundlephobia.com/package/classnames) |
+| **Size**     | [277B](https://bundlephobia.com/package/classix) | [330B](https://bundlephobia.com/package/clsx) | [454B](https://bundlephobia.com/package/classnames) |
 | **Ops/s\***  | 29M                                              | 28M                                           | 7M                                                  |
 | **Strings**  | Yes                                              | Yes                                           | Yes                                                 |
 | **Numbers**  | Yes                                              | Yes                                           | Yes                                                 |
