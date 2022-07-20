@@ -1,4 +1,4 @@
-type Argument = string | boolean | number;
+type Argument = string | boolean | number | null | undefined;
 
 /**
  * Conditionally join classNames into a single string
