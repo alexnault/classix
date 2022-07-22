@@ -1,4 +1,4 @@
-type Argument = string | boolean | number;
+type Argument = string | boolean | null | undefined;
 
 /**
  * Conditionally join classNames into a single string
@@ -12,10 +12,7 @@ function cx(): string {
     arg: unknown;
 
   while (i < arguments.length) {
-    if (
-      (arg = arguments[i++]) &&
-      (typeof arg === "string" || typeof arg === "number")
-    ) {
+    if ((arg = arguments[i++]) && typeof arg === "string") {
       str && (str += " ");
       str += arg;
     }

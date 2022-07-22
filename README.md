@@ -48,25 +48,21 @@ cx(
 
 ## Comparison
 
-|              | classix                                          | clsx                                          | classnames                                          |
-| ------------ | ------------------------------------------------ | --------------------------------------------- | --------------------------------------------------- |
-| **Size**     | [281B](https://bundlephobia.com/package/classix) | [330B](https://bundlephobia.com/package/clsx) | [454B](https://bundlephobia.com/package/classnames) |
-| **Ops/s\***  | 29M                                              | 28M                                           | 7M                                                  |
-| **Strings**  | Yes                                              | Yes                                           | Yes                                                 |
-| **Numbers**  | Yes                                              | Yes                                           | Yes                                                 |
-| **Booleans** | Yes                                              | Yes                                           | Yes                                                 |
-| **Arrays**   | Yes with spreading                               | Yes                                           | Yes                                                 |
-| **Objects**  | No\*\*                                           | Yes                                           | Yes                                                 |
+![Size comparison chart](media/size.png)
 
-\*Operations per second on an AMD Ryzen 5 5600x
+Sources: [classix](https://bundlephobia.com/package/classix), [clsx](https://bundlephobia.com/package/clsx), [classnames](https://bundlephobia.com/package/classnames)
 
-\*\*classix aims to provide the fastest and tiniest utility by ommiting the object API, which it considers less ergonomic than standard function arguments:
+![Performance comparison chart](media/perf.png)
+
+Sources: Ran [benchmark](benchmark/) on an AMD Ryzen 5 5600x.
+
+Compared to other librairies, classix simplifies its API by forbidding object arguments, which it considers less ergonomic than string expressions:
 
 ```js
 // 🚫
-cx({ class1: isPrimary && isLarge, class2: !isPrimary || !isLarge });
+cx({ "class-1": isPrimary && isLarge, "class-2": !isPrimary || !isLarge });
 // ✅
-cx(isPrimary && isLarge ? "class1" : "class2");
+cx(isPrimary && isLarge ? "class-1" : "class-2");
 ```
 
 ## Highlights
