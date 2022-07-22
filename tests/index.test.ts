@@ -35,11 +35,28 @@ describe("cx", () => {
 
     expect(cx("foo", true ? "bar1" : "bar2")).toBe("foo bar1");
     expect(cx("foo", false ? "bar1" : "bar2")).toBe("foo bar2");
+
+    expect(cx("0")).toBe("0");
+    expect(cx("7")).toBe("7");
   });
 
   it("number", () => {
+    // @ts-expect-error Testing outside of types
     expect(cx(0)).toBe("");
-    expect(cx(7)).toBe("7");
+    // @ts-expect-error Testing outside of types
+    expect(cx(7)).toBe("");
+    // @ts-expect-error Testing outside of types
+    expect(cx(-7)).toBe("");
+    // @ts-expect-error Testing outside of types
+    expect(cx(-0)).toBe("");
+    // @ts-expect-error Testing outside of types
+    expect(cx(1_000_000)).toBe("");
+    // @ts-expect-error Testing outside of types
+    expect(cx(1.5)).toBe("");
+    // @ts-expect-error Testing outside of types
+    expect(cx(333e9)).toBe("");
+    // @ts-expect-error Testing outside of types
+    expect(cx(Infinity)).toBe("");
   });
 
   it("object", () => {
