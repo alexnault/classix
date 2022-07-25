@@ -6,6 +6,7 @@
     "lib": ["esnext"],
     "module": "ESNext",
     "moduleResolution": "node",
+    "noEmit": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
