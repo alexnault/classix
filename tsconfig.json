@@ -5,6 +5,7 @@
     "isolatedModules": false,
     "lib": ["esnext"],
     "module": "ESNext",
+    "moduleResolution": "node",
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -12,11 +13,9 @@
     "noUnusedParameters": true,
     "outDir": "dist",
     "skipLibCheck": true,
-    "strict": false,
-    "noImplicitUseStrict": true,
+    "strict": true,
     "target": "esnext",
-    "types": ["jest"],
-    "moduleResolution": "node"
+    "types": ["jest"]
   },
   "include": ["src/**/*"]
 }
