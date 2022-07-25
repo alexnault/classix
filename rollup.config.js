@@ -5,12 +5,13 @@ export default [
   {
     input: "src/index.ts",
     plugins: [esbuild()],
-
     output: [
       {
         file: `dist/classix.cjs.js`,
         format: "cjs",
         exports: "named",
+        strict: false,
+        esModule: false,
       },
       {
         file: `dist/classix.mjs.js`,

@@ -13,10 +13,10 @@
     "outDir": "dist",
     "skipLibCheck": true,
     "strict": false,
-    "noImplicitUseStrict": false,
+    "noImplicitUseStrict": true,
     "target": "esnext",
-    "alwaysStrict": false,
-    "types": ["jest"]
+    "types": ["jest"],
+    "moduleResolution": "node"
   },
   "include": ["src/**/*"]
 }
