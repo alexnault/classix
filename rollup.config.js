@@ -10,8 +10,8 @@ export default [
         file: `dist/classix.cjs.js`,
         format: "cjs",
         exports: "named",
-        strict: false,
-        esModule: false,
+        strict: false, // Don't emit "use strict" in output
+        esModule: false, // Don't emit '__esModule': { value: true } in output
       },
       {
         file: `dist/classix.mjs.js`,
