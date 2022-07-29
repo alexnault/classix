@@ -7,14 +7,14 @@ export default [
     plugins: [esbuild()],
     output: [
       {
-        file: `dist/classix.cjs.js`,
+        file: `dist/cjs/classix.js`,
         format: "cjs",
         exports: "named",
         strict: false, // Don't emit "use strict" in output
         esModule: false, // Don't emit '__esModule': { value: true } in output
       },
       {
-        file: `dist/classix.mjs.js`,
+        file: `dist/esm/classix.js`,
         format: "es",
       },
     ],
