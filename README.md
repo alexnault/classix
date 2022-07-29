@@ -2,7 +2,7 @@
 
 ![Build](https://img.shields.io/github/workflow/status/alexnault/classix/ci-and-publish?style=flat-square)
 ![NPM version](https://img.shields.io/npm/v/classix?style=flat-square)
-![Size](https://img.shields.io/bundlephobia/min/classix?&style=flat-square)
+![Size](https://img.shields.io/bundlephobia/minzip/classix?&style=flat-square)
 
 The [fastest](#comparison) and [tiniest](#comparison) utility for conditionally joining classNames.
 
