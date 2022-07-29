@@ -2,8 +2,8 @@
   "name": "classix",
   "version": "1.0.0-semantic-release",
   "description": "The fastest and tiniest utility for conditionally joining classNames.",
-  "main": "dist/classix.cjs.js",
-  "module": "dist/classix.mjs.js",
+  "main": "dist/cjs/classix.js",
+  "module": "dist/esm/classix.js",
   "types": "dist/classix.d.ts",
   "author": "Alex Nault",
   "keywords": [
@@ -23,12 +23,14 @@
     "build": "rm -rf ./dist && rollup -c",
     "format": "prettier --write \"{src,benchmark}/**/*.{js,ts}\"",
     "lint": "eslint src/ --max-warnings=0",
+    "size": "size-limit",
     "test": "jest"
   },
   "files": [
     "dist"
   ],
   "devDependencies": {
+    "@size-limit/preset-small-lib": "^7.0.8",
     "@types/jest": "^28.0.0",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.30.5",
@@ -45,6 +47,7 @@
     "rollup-plugin-dts": "^4.2.2",
     "rollup-plugin-esbuild": "^4.9.1",
     "semantic-release": "^19.0.3",
+    "size-limit": "^7.0.8",
     "ts-jest": "^28.0.0",
     "typescript": "^4.7.4"
   }
