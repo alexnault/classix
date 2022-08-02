@@ -1,3 +1,5 @@
+![Banner](media/banner.jpg)
+
 # classix
 
 ![NPM version](https://img.shields.io/npm/v/classix?style=flat-square)
