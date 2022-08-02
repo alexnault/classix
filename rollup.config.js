@@ -1,10 +1,11 @@
 import dts from "rollup-plugin-dts";
 import esbuild from "rollup-plugin-esbuild";
+import { terser } from "rollup-plugin-terser";
 
 export default [
   {
     input: "src/index.ts",
-    plugins: [esbuild()],
+    plugins: [esbuild(), terser()],
     output: [
       {
         file: `dist/cjs/classix.js`,
