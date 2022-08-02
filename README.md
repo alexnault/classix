@@ -75,7 +75,7 @@ cx(isPrimary && isLarge ? "class-1" : "class-2");
 - Zero dependencies
 - Fully typed (with TypeScript)
 - Fully tested
-- Follows [semantic versioning](https://semver.org/)
+- [Semver](https://semver.org/) compliant
 
 ## Changelog
 
