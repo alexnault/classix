@@ -1,8 +1,8 @@
 # classix
 
-![Build](https://img.shields.io/github/workflow/status/alexnault/classix/ci-and-publish?style=flat-square)
 ![NPM version](https://img.shields.io/npm/v/classix?style=flat-square)
-![Size](https://img.shields.io/bundlephobia/minzip/classix?&style=flat-square)
+![Build](https://img.shields.io/github/workflow/status/alexnault/classix/ci-and-publish?style=flat-square)
+![Test coverage](https://img.shields.io/codecov/c/github/alexnault/classix?style=flat-square)
 
 The [fastest](#comparison) and [tiniest](#comparison) utility for conditionally joining classNames.
 
@@ -54,7 +54,7 @@ cx(
 
 ![Size comparison chart](media/size.png)
 
-Sources: [classix](https://bundlephobia.com/package/classix), [clsx](https://bundlephobia.com/package/clsx), [classnames](https://bundlephobia.com/package/classnames)
+Sources: [classix](https://bundlejs.com/?q=classix), [clsx](https://bundlejs.com/?q=clsx), [classnames](https://bundlejs.com/?q=classnames)
 
 ![Performance comparison chart](media/perf.png)
 
