@@ -18,6 +18,7 @@ describe("cx", () => {
     expect(cx("foo bar")).toBe("foo bar");
     expect(cx("foo", "bar")).toBe("foo bar");
     expect(cx("foo bar", "foo2 bar2")).toBe("foo bar foo2 bar2");
+    expect(cx("foo", "", "bar")).toBe("foo bar");
   });
 
   it("boolean", () => {
