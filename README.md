@@ -47,35 +47,46 @@ cx(...["class1", "class2", "class3"]);
 cx(
   "flex",
   isPrimary ? "bg-primary-100" : "bg-secondary-100",
-  isLarge ? "m-4 p-4" : "m-2 py-2"
+  isLarge ? "m-4 p-4" : "m-2 p-2"
 );
 // => "flex bg-primary-100 m-2 p-2" *assuming isPrimary is true and isLarge is false
 ```
+
+## Why?
+
+classix considers string expressions faster to type and easier to reason about (conditions first, followed by classNames) than alternatives:
+
+```js
+// 🚫
+clsx({ "class-1": isPrimary });
+// ✅
+cx(isPrimary && "class-1");
+
+// 🚫
+clsx({ "class-1": isPrimary && isLarge, "class-2": !isPrimary || !isLarge });
+// ✅
+cx(isPrimary && isLarge ? "class-1" : "class-2");
+```
+
+This reasoning enables classix to simplify its API by allowing only string expressions as arguments. Not only does it provide a consistent way of joining classNames, but using classix also leads to [better performance](#comparison) and a [smaller bundle size](#comparison) for your application.
 
 ## Comparison
 
 ![Size comparison chart](media/size.png)
 
-Sources: [classix](https://bundlejs.com/?q=classix), [clsx](https://bundlejs.com/?q=clsx), [classnames](https://bundlejs.com/?q=classnames)
+Sources: [classix](https://bundlejs.com/api?q=classix), [clsx](https://bundlejs.com/api?q=clsx), [classnames](https://bundlejs.com/api?q=classnames)
 
 ![Performance comparison chart](media/perf.png)
 
 Sources: Ran [benchmark](benchmark/) on an AMD Ryzen 5 5600x.
 
-Compared to other libraries, classix simplifies its API by omitting the use of object arguments, which it considers less ergonomic than string expressions:
-
-```js
-// 🚫
-cx({ "class-1": isPrimary && isLarge, "class-2": !isPrimary || !isLarge });
-// ✅
-cx(isPrimary && isLarge ? "class-1" : "class-2");
-```
-
 ## Highlights
 
-- Fastest & tiniest
+- Supports all major browsers
+- Supports all versions of Node.js
+- Works with both ES Modules and CommonJS
 - Zero dependencies
-- Fully typed (with TypeScript)
+- Fully typed with TypeScript
 - Fully tested
 - [Semver](https://semver.org/) compliant
 
