@@ -54,7 +54,7 @@ cx(
 
 ## Why?
 
-classix considers string expressions faster to type and easier to reason about (conditions first, followed by classNames) than alternatives:
+classix considers string expressions faster to type and easier to reason about (conditions first, followed by classNames) than the alternative:
 
 ```js
 // 🚫
