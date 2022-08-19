@@ -11,7 +11,7 @@ function cx(): string {
     i = 0,
     arg: unknown;
 
-  while (i < arguments.length) {
+  for (; i < arguments.length; ) {
     if ((arg = arguments[i++]) && typeof arg === "string") {
       str && (str += " ");
       str += arg;
