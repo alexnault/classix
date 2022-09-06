@@ -12,7 +12,6 @@ export default [
         format: "cjs",
         exports: "named",
         strict: false, // Don't emit "use strict" in output
-        esModule: false, // Don't emit '__esModule': { value: true } in output
       },
       {
         file: `dist/esm/classix.js`,

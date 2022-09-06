@@ -3,12 +3,12 @@ module.exports = [
     name: "CJS Minified",
     path: "dist/cjs/*.js",
     gzip: false,
-    limit: "233B",
+    limit: "282B",
   },
   {
     name: "CJS Compressed",
     path: "dist/cjs/*.js",
-    limit: "167B",
+    limit: "203B",
   },
   {
     name: "ESM Minified",
