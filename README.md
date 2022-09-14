@@ -19,35 +19,35 @@ npm install classix
 Use any amount of string expressions and classix will join them like so:
 
 ```js
-import cx from 'classix';
+import cx from "classix";
 // or
-import { cx } from 'classix';
+import { cx } from "classix";
 
-cx('class1', 'class2');
+cx("class1", "class2");
 // => "class1 class2"
 
-cx('class1 class2', 'class3', 'class4 class5');
+cx("class1 class2", "class3", "class4 class5");
 // => "class1 class2 class3 class4 class5"
 
-cx('class1', true && 'class2');
+cx("class1", true && "class2");
 // => "class1 class2"
 
-cx(false && 'class1', 'class2');
+cx(false && "class1", "class2");
 // => "class2"
 
-cx(true ? 'class1' : 'class2');
+cx(true ? "class1" : "class2");
 // => "class1"
 
-cx('class1', false ? 'class2' : 'class3');
+cx("class1", false ? "class2" : "class3");
 // => "class1 class3"
 
-cx(...['class1', 'class2', 'class3']);
+cx(...["class1", "class2", "class3"]);
 // => class1 class2 class3
 
 cx(
-  'flex',
-  isPrimary ? 'bg-primary-100' : 'bg-secondary-100',
-  isLarge ? 'm-4 p-4' : 'm-2 p-2'
+  "flex",
+  isPrimary ? "bg-primary-100" : "bg-secondary-100",
+  isLarge ? "m-4 p-4" : "m-2 p-2"
 );
 // => "flex bg-primary-100 m-2 p-2" *assuming isPrimary is true and isLarge is false
 ```
@@ -58,14 +58,14 @@ classix considers string expressions faster to type and easier to reason about (
 
 ```js
 // 🚫
-clsx({ 'class-1': isPrimary });
+clsx({ "class-1": isPrimary });
 // ✅
-cx(isPrimary && 'class-1');
+cx(isPrimary && "class-1");
 
 // 🚫
-clsx({ 'class-1': isPrimary && isLarge, 'class-2': !isPrimary || !isLarge });
+clsx({ "class-1": isPrimary && isLarge, "class-2": !isPrimary || !isLarge });
 // ✅
-cx(isPrimary && isLarge ? 'class-1' : 'class-2');
+cx(isPrimary && isLarge ? "class-1" : "class-2");
 ```
 
 This reasoning enables classix to simplify its API by allowing only string expressions as arguments. Not only does it provide a consistent way of joining classNames, but using classix also leads to [better performance](#comparison) and a [smaller bundle size](#comparison) for your application.
