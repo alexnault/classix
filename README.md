@@ -90,6 +90,24 @@ Sources: Ran [benchmark](benchmark/) on an AMD Ryzen 5 5600x.
 - Fully tested
 - [Semver](https://semver.org/) compliant
 
+## Migrating to classix
+
+If you are using `classnames` or `clsx`, you can migrate to `classix` by changing your `imports`:
+
+```diff
+- import classnames from 'classnames';
++ import cx from 'classix';
+```
+
+And if you were using object arguments, you'll have to convert them to string arguments:
+
+```diff
+- classnames({ 'class-1': cond });
++ cx(cond && 'class-1')
+```
+
+That's it!
+
 ## Changelog
 
 For a list of changes and releases, see the [changelog](https://github.com/alexnault/classix/releases).
