@@ -74,21 +74,11 @@ String expressions have a few benefits over objects:
 - A more intuitive syntax (conditions first)
 - `else` support through ternary operators
 
-On top of that, classix provides:
+What's more, by leveraging them, classix provides:
 
 - A simpler and consistent API
 - [A smaller library size](#size)
 - [Better performance](#performance)
-
-<!-- On top of it, by leveraging string expressions, classix provides: -->
-
-<!-- This has a few benefits:
-
-- A simpler and consistent API
-- A more intuitive syntax (conditions first)
-- A faster typing experience
-- [A smaller library size](#size)
-- [Better performance](#performance) -->
 
 ### Size
 
