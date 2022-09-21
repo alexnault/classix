@@ -6,7 +6,7 @@
 ![Build](https://img.shields.io/github/workflow/status/alexnault/classix/ci-and-publish?style=flat-square)
 ![Test coverage](https://img.shields.io/codecov/c/github/alexnault/classix?style=flat-square)
 
-The [fastest](#comparison) and [tiniest](#comparison) utility for conditionally joining classNames.
+The [fastest](#performance) and [tiniest](#size) utility for conditionally joining classNames.
 
 ## Installation
 
@@ -52,9 +52,9 @@ cx(
 // => "flex bg-primary-100 m-2 p-2" *assuming isPrimary is true and isLarge is false
 ```
 
-## Why?
+## Comparison
 
-classix considers string expressions faster to type and easier to reason about (conditions first, followed by classNames) than the alternative:
+Compared to other libraries, classix only allows string expressions as arguments:
 
 ```js
 // 🚫
@@ -68,13 +68,25 @@ clsx({ "class-1": isPrimary && isLarge, "class-2": !isPrimary || !isLarge });
 cx(isPrimary && isLarge ? "class-1" : "class-2");
 ```
 
-This reasoning enables classix to simplify its API by allowing only string expressions as arguments. Not only does it provide a consistent way of joining classNames, but using classix also leads to [better performance](#comparison) and a [smaller bundle size](#comparison) for your application.
+String expressions have a few benefits over objects:
 
-## Comparison
+- A faster typing experience
+- A more intuitive syntax (conditions first)
+- `else` support through ternary operators
+
+What's more, by leveraging them, classix provides:
+
+- A simpler and consistent API
+- [A smaller library size](#size)
+- [Better performance](#performance)
+
+### Size
 
 ![Size comparison chart](media/size.png)
 
 Sources: [classix](https://bundlejs.com/api?q=classix), [clsx](https://bundlejs.com/api?q=clsx), [classnames](https://bundlejs.com/api?q=classnames)
+
+### Performance
 
 ![Performance comparison chart](media/perf.png)
 
@@ -102,8 +114,8 @@ If you are using `classnames` or `clsx`, you can migrate to `classix` by changin
 And if you were using object arguments, you'll have to convert them to string arguments:
 
 ```diff
-- classnames({ 'class-1': cond });
-+ cx(cond && 'class-1')
+- classnames({ 'class-1': cond1, 'class-2': cond2 });
++ cx(cond1 && 'class-1', cond2 && 'class-2')
 ```
 
 That's it!
