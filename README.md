@@ -120,6 +120,14 @@ And if you were using object arguments, you'll have to convert them to string ar
 
 That's it!
 
+## Some love ❤️
+
+> "This looks great. I agree that the object notation is not great and not worth the perf hit." — @jmeistrich
+
+> "It looks good! I like the idea that you can’t pass objects and is simple and minimal. I will use it on my next application instead of classnames." — @m0ment98
+
+> "Thank you for creating and maintaining this package! It is great." — @charkour
+
 ## Changelog
 
 For a list of changes and releases, see the [changelog](https://github.com/alexnault/classix/releases).
