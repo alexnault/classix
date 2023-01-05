@@ -3,7 +3,7 @@
 # classix
 
 ![NPM version](https://img.shields.io/npm/v/classix?style=flat-square)
-![Build](https://img.shields.io/github/workflow/status/alexnault/classix/ci-and-publish?style=flat-square)
+![Build](https://img.shields.io/github/actions/workflow/status/alexnault/classix/ci-and-publish.yml?branch=main&style=flat-square)
 ![Test coverage](https://img.shields.io/codecov/c/github/alexnault/classix?style=flat-square)
 
 The [fastest](#performance) and [tiniest](#size) utility for conditionally joining classNames.
