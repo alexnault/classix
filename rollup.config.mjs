@@ -14,7 +14,7 @@ export default [
         strict: false, // Don't emit "use strict" in output
       },
       {
-        file: `dist/esm/classix.js`,
+        file: `dist/esm/classix.mjs`,
         format: "es",
       },
     ],
