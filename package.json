@@ -2,9 +2,18 @@
   "name": "classix",
   "version": "1.0.0-semantic-release",
   "description": "The fastest and tiniest utility for conditionally joining classNames.",
+  "type": "module",
   "main": "dist/cjs/classix.js",
   "module": "dist/esm/classix.js",
   "types": "dist/classix.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/classix.js",
+      "import": "./dist/esm/classix.js",
+      "types": "./dist/classix.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
   "author": "Alex Nault",
   "keywords": [
     "class",
@@ -19,7 +28,7 @@
   "repository": "https://github.com/alexnault/classix",
   "homepage": "https://github.com/alexnault/classix#readme",
   "scripts": {
-    "bench": "node benchmark",
+    "bench": "node benchmark/index.mjs",
     "build": "rm -rf ./dist && rollup -c",
     "format": "prettier --write \"{src,benchmark}/**/*.{js,ts}\"",
     "lint": "eslint src/ --max-warnings=0",

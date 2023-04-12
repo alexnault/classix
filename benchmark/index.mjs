@@ -1,9 +1,9 @@
-const benchmark = require("benchmark");
-const classnames = require("classnames");
-const { clsx } = require("clsx");
-const { cx } = require("classix");
+import benchmark from "benchmark";
+import classnames from "classnames";
+import { clsx } from "clsx";
+import { cx } from "classix";
 
-const { cx: cxLocal } = require("../dist/cjs/classix.js");
+import { cx as cxLocal } from "../dist/esm/classix.js";
 
 new benchmark.Suite()
   .add("classnames", () => classnames("class1", true && "class2"))
