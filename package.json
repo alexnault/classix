@@ -2,14 +2,13 @@
   "name": "classix",
   "version": "1.0.0-semantic-release",
   "description": "The fastest and tiniest utility for conditionally joining classNames.",
-  "type": "module",
   "main": "dist/cjs/classix.js",
-  "module": "dist/esm/classix.js",
+  "module": "dist/esm/classix.mjs",
   "types": "dist/classix.d.ts",
   "exports": {
     ".": {
       "require": "./dist/cjs/classix.js",
-      "import": "./dist/esm/classix.js",
+      "import": "./dist/esm/classix.mjs",
       "types": "./dist/classix.d.ts"
     },
     "./package.json": "./package.json"

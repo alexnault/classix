@@ -12,13 +12,13 @@ module.exports = [
   },
   {
     name: "ESM Minified",
-    path: "dist/esm/*.js",
+    path: "dist/esm/*.mjs",
     gzip: false,
     limit: "134B",
   },
   {
     name: "ESM Compressed",
-    path: "dist/esm/*.js",
+    path: "dist/esm/*.mjs",
     limit: "107B",
   },
 ];

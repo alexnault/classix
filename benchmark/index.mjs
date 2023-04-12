@@ -3,7 +3,7 @@ import classnames from "classnames";
 import { clsx } from "clsx";
 import { cx } from "classix";
 
-import { cx as cxLocal } from "../dist/esm/classix.js";
+import { cx as cxLocal } from "../dist/esm/classix.mjs";
 
 new benchmark.Suite()
   .add("classnames", () => classnames("class1", true && "class2"))
