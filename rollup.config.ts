@@ -1,8 +1,9 @@
 import dts from "rollup-plugin-dts";
 import esbuild from "rollup-plugin-esbuild";
 import { terser } from "rollup-plugin-terser";
+import type { RollupOptions } from "rollup";
 
-export default [
+const config: RollupOptions[] = [
   {
     input: "src/index.ts",
     plugins: [esbuild(), terser()],
@@ -28,3 +29,5 @@ export default [
     },
   },
 ];
+
+export default config;

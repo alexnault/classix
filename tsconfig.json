@@ -17,5 +17,5 @@
     "strict": true,
     "target": "esnext"
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "rollup.config.ts"]
 }

@@ -28,7 +28,7 @@
   "homepage": "https://github.com/alexnault/classix#readme",
   "scripts": {
     "bench": "node benchmark/index.mjs",
-    "build": "rm -rf ./dist && rollup -c",
+    "build": "rm -rf ./dist && rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
     "format": "prettier --write \"{src,benchmark}/**/*.{js,ts}\"",
     "lint": "eslint src/ --max-warnings=0",
     "size": "size-limit",
@@ -39,6 +39,7 @@
   ],
   "sideEffects": false,
   "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.0",
     "@size-limit/preset-small-lib": "^7.0.8",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.30.5",
