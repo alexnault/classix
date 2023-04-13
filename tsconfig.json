@@ -15,8 +15,7 @@
     "outDir": "dist",
     "skipLibCheck": true,
     "strict": true,
-    "target": "esnext",
-    "types": ["jest"]
+    "target": "esnext"
   },
   "include": ["src/**/*"]
 }
