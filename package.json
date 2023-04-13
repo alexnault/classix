@@ -7,9 +7,9 @@
   "types": "./dist/classix.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/classix.d.ts",
       "require": "./dist/cjs/classix.js",
-      "import": "./dist/esm/classix.mjs",
-      "types": "./dist/classix.d.ts"
+      "import": "./dist/esm/classix.mjs"
     },
     "./package.json": "./package.json"
   },
