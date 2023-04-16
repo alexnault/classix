@@ -29,8 +29,8 @@
   "scripts": {
     "bench": "node benchmark/index.mjs",
     "build": "rm -rf ./dist && rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
-    "format": "prettier --write \"{src,benchmark}/**/*.{js,ts}\"",
-    "lint": "eslint src/ --max-warnings=0",
+    "format": "prettier ./ --write",
+    "lint": "eslint ./ --max-warnings=0",
     "size": "size-limit",
     "test": "vitest run --coverage"
   },
