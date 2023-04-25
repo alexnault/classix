@@ -57,7 +57,7 @@
     "rollup-plugin-dts": "^4.2.2",
     "rollup-plugin-esbuild": "^4.9.1",
     "rollup-plugin-terser": "^7.0.2",
-    "semantic-release": "^19.0.3",
+    "semantic-release": "^21.0.1",
     "size-limit": "^7.0.8",
     "typescript": "^4.7.4",
     "vitest": "^0.30.1"
