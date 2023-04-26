@@ -92,7 +92,7 @@ Sources: [classix](https://deno.bundlejs.com?q=classix), [clsx](https://deno.bun
 
 ![Performance comparison chart](media/perf.png)
 
-Sources: Ran [benchmark](benchmark/) on an AMD Ryzen 5 5600x.
+Sources: Ran [benchmark](benchmark/) on an AMD Ryzen 5 5600x with Node 20.
 
 ## Highlights
 
