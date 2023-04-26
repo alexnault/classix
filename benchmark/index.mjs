@@ -5,73 +5,65 @@ import { cx } from "classix";
 
 import { cx as cxLocal } from "../dist/esm/classix.mjs";
 
+const NB_RUN = 100_000_000;
+
 function logResult(name, ms) {
-  const millionsOfOpsPerSecond = (
-    (100_000_000 * 1000) /
-    ms /
-    1_000_000
-  ).toFixed(1);
+  const millionsOfOpsPerSecond = ((NB_RUN * 1000) / ms / 1_000_000).toFixed(1);
   console.log(`${name}: ${millionsOfOpsPerSecond}M ops/s`);
 }
 
 // Repetition of code was used as to not affect performance
-function benchClassnamesObject() {
-  const start = performance.now();
-  for (let i = 0; i < 100_000_000; i++) {
-    classnames("class-1", { "class-2": true });
-  }
-  const stop = performance.now();
-  logResult("classnames (object)", stop - start);
-}
+let start = 0;
+let stop = 0;
 
-function benchClassnames() {
-  const start = performance.now();
-  for (let i = 0; i < 100_000_000; i++) {
-    classnames("class-1", true && "class-2");
-  }
-  const stop = performance.now();
-  logResult("classnames", stop - start);
+start = performance.now();
+for (let i = 0; i < NB_RUN; i++) {
+  classnames("class-1", { "class-2": true });
 }
+stop = performance.now();
+logResult("classnames (object)", stop - start);
 
-function benchClsxObject() {
-  const start = performance.now();
-  for (let i = 0; i < 100_000_000; i++) {
-    clsx("class-1", { "class-2": true });
-  }
-  const stop = performance.now();
-  logResult("clsx (object)", stop - start);
+//
+
+start = performance.now();
+for (let i = 0; i < NB_RUN; i++) {
+  classnames("class-1", true && "class-2");
 }
+stop = performance.now();
+logResult("classnames", stop - start);
 
-function benchClsx() {
-  const start = performance.now();
-  for (let i = 0; i < 100_000_000; i++) {
-    clsx("class-1", true && "class-2");
-  }
-  const stop = performance.now();
-  logResult("clsx", stop - start);
+//
+
+start = performance.now();
+for (let i = 0; i < NB_RUN; i++) {
+  clsx("class-1", { "class-2": true });
 }
+stop = performance.now();
+logResult("clsx (object)", stop - start);
 
-function benchClassix() {
-  const start = performance.now();
-  for (let i = 0; i < 100_000_000; i++) {
-    cx("class-1", true && "class-2");
-  }
-  const stop = performance.now();
-  logResult("classix", stop - start);
+//
+
+start = performance.now();
+for (let i = 0; i < NB_RUN; i++) {
+  clsx("class-1", true && "class-2");
 }
+stop = performance.now();
+logResult("clsx", stop - start);
 
-function benchClassixLocal() {
-  const start = performance.now();
-  for (let i = 0; i < 100_000_000; i++) {
-    cxLocal("class-1", true && "class-2");
-  }
-  const stop = performance.now();
-  logResult("classix (local)", stop - start);
+//
+
+start = performance.now();
+for (let i = 0; i < NB_RUN; i++) {
+  cx("class-1", true && "class-2");
 }
+stop = performance.now();
+logResult("classix", stop - start);
 
-benchClassnamesObject();
-benchClassnames();
-benchClsxObject();
-benchClsx();
-benchClassix();
-benchClassixLocal();
+//
+
+start = performance.now();
+for (let i = 0; i < NB_RUN; i++) {
+  cxLocal("class-1", true && "class-2");
+}
+stop = performance.now();
+logResult("classix (local)", stop - start);
