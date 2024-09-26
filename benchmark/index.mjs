@@ -1,3 +1,4 @@
+/* eslint-disable no-constant-binary-expression */
 import { performance } from "node:perf_hooks";
 import classnames from "classnames";
 import { clsx } from "clsx";

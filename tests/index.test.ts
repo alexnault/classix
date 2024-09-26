@@ -1,3 +1,5 @@
+/* eslint-disable no-constant-condition */
+/* eslint-disable no-constant-binary-expression */
 import { describe, it, expect } from "vitest";
 
 import { cx } from "../src";
