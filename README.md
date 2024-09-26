@@ -49,7 +49,7 @@ cx(...["class1", "class2", "class3"]);
 cx(
   "flex",
   isPrimary ? "bg-primary-100" : "bg-secondary-100",
-  isLarge ? "m-4 p-4" : "m-2 p-2"
+  isLarge ? "m-4 p-4" : "m-2 p-2",
 );
 // => "flex bg-primary-100 m-2 p-2" *assuming isPrimary is true and isLarge is false
 ```
