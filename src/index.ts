@@ -12,7 +12,9 @@ function cx(): string {
     arg: unknown;
 
   for (; i < arguments.length; ) {
+    // eslint-disable-next-line prefer-rest-params
     if ((arg = arguments[i++]) && typeof arg === "string") {
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       str && (str += " ");
       str += arg;
     }
