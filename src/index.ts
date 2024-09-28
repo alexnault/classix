@@ -1,11 +1,11 @@
-type Argument = string | boolean | null | undefined;
+export type ClassName = string | boolean | null | undefined;
 
 /**
  * Conditionally join classNames into a single string
  * @param {...String} args The expressions to evaluate
  * @returns {String} The joined classNames
  */
-function cx(...args: Argument[]): string;
+function cx(...args: ClassName[]): string;
 function cx(): string {
   let str = "",
     i = 0,
