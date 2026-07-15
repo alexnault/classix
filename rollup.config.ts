@@ -23,10 +23,16 @@ const config: RollupOptions[] = [
   {
     input: "src/index.ts",
     plugins: [dts()],
-    output: {
-      file: `dist/classix.d.ts`,
-      format: "es",
-    },
+    output: [
+      {
+        file: `dist/classix.d.ts`,
+        format: "es",
+      },
+      {
+        file: `dist/classix.d.mts`,
+        format: "es",
+      },
+    ],
   },
 ];
 
