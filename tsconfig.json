@@ -1,21 +1,18 @@
 {
   "compilerOptions": {
-    "declaration": true,
     "esModuleInterop": true,
-    "isolatedModules": false,
+    "isolatedModules": true,
     "lib": ["esnext"],
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "noEmit": true,
-    "noImplicitAny": true,
     "noImplicitReturns": true,
-    "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "dist",
     "skipLibCheck": true,
     "strict": true,
-    "target": "esnext"
+    "target": "esnext",
+    "verbatimModuleSyntax": true
   },
-  "include": ["src/**/*", "rollup.config.ts"]
+  "include": ["src/**/*", "tests/**/*", "rollup.config.ts", "vitest.config.ts"]
 }
