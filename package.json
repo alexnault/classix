@@ -4,15 +4,15 @@
   "description": "The fastest and tiniest utility for conditionally joining classNames.",
   "main": "./dist/cjs/classix.js",
   "module": "./dist/esm/classix.mjs",
-  "types": "./dist/classix.d.ts",
+  "types": "./dist/cjs/classix.d.ts",
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/classix.d.mts",
+        "types": "./dist/esm/classix.d.mts",
         "default": "./dist/esm/classix.mjs"
       },
       "require": {
-        "types": "./dist/classix.d.ts",
+        "types": "./dist/cjs/classix.d.ts",
         "default": "./dist/cjs/classix.js"
       }
     },
@@ -33,7 +33,7 @@
   "homepage": "https://github.com/alexnault/classix#readme",
   "scripts": {
     "bench": "node benchmark/index.mjs",
-    "build": "rm -rf ./dist && rolldown --config rolldown.config.ts && tsc src/index.ts --ignoreConfig --declaration --emitDeclarationOnly --outDir dist && mv dist/index.d.ts dist/classix.d.ts && cp dist/classix.d.ts dist/classix.d.mts",
+    "build": "tsdown",
     "format": "prettier ./ --write",
     "lint": "eslint ./ --max-warnings=0",
     "size": "size-limit",
@@ -55,9 +55,9 @@
     "eslint": "^10.14.0",
     "globals": "^17.14.0",
     "prettier": "^3.9.10",
-    "rolldown": "^1.2.16",
     "semantic-release": "^25.0.9",
     "size-limit": "^11.2.0",
+    "tsdown": "^0.23.5",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.72.1",
     "vitest": "^5.1.0"
