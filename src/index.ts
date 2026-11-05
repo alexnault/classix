@@ -11,7 +11,7 @@ function cx(): string {
     i = 0,
     arg: unknown;
 
-  for (; i < arguments.length; ) {
+  for (; i < arguments.length;) {
     // eslint-disable-next-line prefer-rest-params
     if ((arg = arguments[i++]) && typeof arg === "string") {
       // eslint-disable-next-line @typescript-eslint/no-unused-expressions
