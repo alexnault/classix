@@ -49,7 +49,6 @@
     "@rollup/plugin-terser": "^1.0.0",
     "@rollup/plugin-typescript": "^12.3.0",
     "@size-limit/preset-small-lib": "^11.2.0",
-    "@types/eslint__js": "^8.42.3",
     "@typescript-eslint/eslint-plugin": "^8.7.0",
     "@typescript-eslint/parser": "^8.7.0",
     "@vitest/coverage-v8": "^4.0.18",
