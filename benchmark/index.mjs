@@ -14,8 +14,8 @@ function logResult(name, ms) {
 }
 
 // Repetition of code was used as to not affect performance
-let start = 0;
-let stop = 0;
+let start;
+let stop;
 
 start = performance.now();
 for (let i = 0; i < NB_RUN; i++) {
