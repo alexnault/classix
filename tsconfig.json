@@ -5,7 +5,7 @@
     "isolatedModules": false,
     "lib": ["esnext"],
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "noEmit": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
