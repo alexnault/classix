@@ -1,32 +1,20 @@
 // @ts-check
 
 import eslint from "@eslint/js";
-import tseslint from "typescript-eslint";
-import parser from "@typescript-eslint/parser";
-import plugin from "@typescript-eslint/eslint-plugin";
-import eslintConfigPrettier from "eslint-config-prettier";
+import { defineConfig, globalIgnores } from "eslint/config";
 import globals from "globals";
+import tseslint from "typescript-eslint";
 
-export default [
+export default defineConfig(
+  globalIgnores(["dist/", "coverage/"]),
   eslint.configs.recommended,
-  ...tseslint.configs.recommended,
-  eslintConfigPrettier,
-  {
-    // https://github.com/eslint/eslint/issues/17930#issuecomment-1872947672
-    ignores: ["node_modules/*", "dist/*", "coverage/*"],
-  },
+  tseslint.configs.recommended,
   {
     languageOptions: {
-      parser: parser,
       globals: {
         ...globals.browser,
         ...globals.node,
       },
     },
-    plugins: {
-      "@typescript-eslint": plugin,
-    },
-    rules: {},
-    ignores: ["node_modules/*", "dist/*", "coverage/*"],
   },
-];
+);
