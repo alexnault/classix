@@ -11,7 +11,7 @@
     "path": "dist/cjs/*.js",
     "gzip": true,
     "brotli": false,
-    "limit": "203B"
+    "limit": "204B"
   },
   {
     "name": "CJS Brotlied",

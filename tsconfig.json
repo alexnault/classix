@@ -14,5 +14,5 @@
     "target": "esnext",
     "verbatimModuleSyntax": true
   },
-  "include": ["src/**/*", "tests/**/*", "rollup.config.ts", "vitest.config.ts"]
+  "include": ["src/**/*", "tests/**/*", "tsdown.config.mts", "vitest.config.ts"]
 }
