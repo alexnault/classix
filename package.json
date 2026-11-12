@@ -46,7 +46,7 @@
   "sideEffects": false,
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@size-limit/preset-small-lib": "^11.2.0",
+    "@size-limit/preset-small-lib": "^14.3.0",
     "@vitest/coverage-v8": "^5.1.0",
     "classix": "^2.2.22",
     "classnames": "^2.5.1",
@@ -56,7 +56,7 @@
     "globals": "^17.14.0",
     "prettier": "^3.9.10",
     "semantic-release": "^25.0.9",
-    "size-limit": "^11.2.0",
+    "size-limit": "^14.3.0",
     "tsdown": "^0.23.5",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.72.1",
