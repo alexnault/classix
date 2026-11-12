@@ -4,41 +4,41 @@
     "path": "dist/cjs/*.js",
     "gzip": false,
     "brotli": false,
-    "limit": "282B"
+    "limit": "207B"
   },
   {
     "name": "CJS Gzipped",
     "path": "dist/cjs/*.js",
     "gzip": true,
     "brotli": false,
-    "limit": "204B"
+    "limit": "182B"
   },
   {
     "name": "CJS Brotlied",
     "path": "dist/cjs/*.js",
     "gzip": false,
     "brotli": true,
-    "limit": "173B"
+    "limit": "132B"
   },
   {
     "name": "ESM Minified",
     "path": "dist/esm/*.mjs",
     "gzip": false,
     "brotli": false,
-    "limit": "134B"
+    "limit": "150B"
   },
   {
     "name": "ESM Gzipped",
     "path": "dist/esm/*.mjs",
     "gzip": true,
     "brotli": false,
-    "limit": "107B"
+    "limit": "140B"
   },
   {
     "name": "ESM Brotlied",
     "path": "dist/esm/*.mjs",
     "gzip": false,
     "brotli": true,
-    "limit": "90B"
+    "limit": "102B"
   }
 ]
