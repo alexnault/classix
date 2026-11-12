@@ -1,31 +1,31 @@
 [
   {
     "name": "CJS Minified",
-    "path": "dist/cjs/*.js",
+    "path": "dist/cjs/classix.js",
     "gzip": false,
     "brotli": false,
-    "import": "{ cx }",
-    "limit": "286B"
+    "limit": "207B",
+    "rolldown": false
   },
   {
     "name": "CJS Gzipped",
-    "path": "dist/cjs/*.js",
+    "path": "dist/cjs/classix.js",
     "gzip": true,
     "brotli": false,
-    "import": "{ cx }",
-    "limit": "199B"
+    "limit": "182B",
+    "rolldown": false
   },
   {
     "name": "CJS Brotlied",
-    "path": "dist/cjs/*.js",
+    "path": "dist/cjs/classix.js",
     "gzip": false,
     "brotli": true,
-    "import": "{ cx }",
-    "limit": "167B"
+    "limit": "132B",
+    "rolldown": false
   },
   {
     "name": "ESM Minified",
-    "path": "dist/esm/*.mjs",
+    "path": "dist/esm/classix.mjs",
     "gzip": false,
     "brotli": false,
     "import": "{ cx }",
@@ -33,7 +33,7 @@
   },
   {
     "name": "ESM Gzipped",
-    "path": "dist/esm/*.mjs",
+    "path": "dist/esm/classix.mjs",
     "gzip": true,
     "brotli": false,
     "import": "{ cx }",
@@ -41,7 +41,7 @@
   },
   {
     "name": "ESM Brotlied",
-    "path": "dist/esm/*.mjs",
+    "path": "dist/esm/classix.mjs",
     "gzip": false,
     "brotli": true,
     "import": "{ cx }",
