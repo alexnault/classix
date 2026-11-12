@@ -46,7 +46,7 @@
   "sideEffects": false,
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@size-limit/file": "^14.3.0",
+    "@size-limit/preset-small-lib": "^14.3.0",
     "@vitest/coverage-v8": "^5.1.0",
     "classix": "^2.2.22",
     "classnames": "^2.5.1",
